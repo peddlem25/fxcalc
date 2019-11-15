@@ -10,8 +10,8 @@ class Exchange extends StatefulWidget {
 }
 
 class ExchangeState extends State<Exchange> {
-  String currencyFrom = 'EUR';
-  String currencyTo = 'USD';
+  String currencyFrom = 'USD';
+  String currencyTo = 'CAD';
   String amount = '';
   String result = '';
   final String url = 'https://api.ratesapi.io/api/latest';
@@ -160,7 +160,7 @@ class ExchangeState extends State<Exchange> {
           child: Container(
             child: RaisedButton(
               child: Text('Calculate'),
-              color: Colors.lightBlueAccent,
+              color: Colors.redAccent,
               textColor: Colors.white,
               padding: EdgeInsets.fromLTRB(0.0, 30.0, 0.0, 30.0),
               onPressed: () => handleClick()
@@ -172,7 +172,7 @@ class ExchangeState extends State<Exchange> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Exchange Flutter'),
+        title: Text('Simple Exchange'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.info),
